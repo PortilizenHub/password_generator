@@ -49,38 +49,7 @@ class PlayState extends FlxState
 		'4',
 		'3',
 		'2',
-		'1',
-		'`',
-		'!',
-		'@',
-		'#', 
-		'$',
-		'%',
-		'^',
-		'&',
-		'*', 
-		'(', 
-		')',
-		'_', 
-		'+', 
-		'{',
-		'}', 
-		'|', 
-		':',
-		'"',
-		'<',
-		'>',
-		'?',
-		'.',
-		',',
-		"'",
-		';',
-		'[',
-		']',
-		'=',
-		'-',
-		'`'
-		
+		'1'
 	];
 
 	var passwordsGenerated:Int = 1;
@@ -89,7 +58,12 @@ class PlayState extends FlxState
 	{
 		trace('password NO.' + passwordsGenerated);
 
-		passwordThing = passwordString();
+		passwordThing = letterData[FlxG.random.int(0, letterData.length - 1)] + letterData[FlxG.random.int(0, letterData.length - 1)]
+			+ letterData[FlxG.random.int(0, letterData.length - 1)] + letterData[FlxG.random.int(0, letterData.length - 1)]
+			+ letterData[FlxG.random.int(0, letterData.length - 1)] + letterData[FlxG.random.int(0, letterData.length - 1)]
+			+ letterData[FlxG.random.int(0, letterData.length - 1)] + letterData[FlxG.random.int(0, letterData.length - 1)]
+			+ letterData[FlxG.random.int(0, letterData.length - 1)] + letterData[FlxG.random.int(0, letterData.length - 1)]
+			+ letterData[FlxG.random.int(0, letterData.length - 1)] + letterData[FlxG.random.int(0, letterData.length - 1)];
 
 		pass = new FlxText(180, 60, 0, passwordThing, 24);
 		add(pass);
@@ -106,7 +80,12 @@ class PlayState extends FlxState
 
 			trace('password NO.' + passwordsGenerated);
 			
-			passwordThing = passwordString();
+			passwordThing = letterData[FlxG.random.int(0, letterData.length - 1)] + letterData[FlxG.random.int(0, letterData.length - 1)]
+				+ letterData[FlxG.random.int(0, letterData.length - 1)] + letterData[FlxG.random.int(0, letterData.length - 1)]
+				+ letterData[FlxG.random.int(0, letterData.length - 1)] + letterData[FlxG.random.int(0, letterData.length - 1)]
+				+ letterData[FlxG.random.int(0, letterData.length - 1)] + letterData[FlxG.random.int(0, letterData.length - 1)]
+				+ letterData[FlxG.random.int(0, letterData.length - 1)] + letterData[FlxG.random.int(0, letterData.length - 1)]
+				+ letterData[FlxG.random.int(0, letterData.length - 1)] + letterData[FlxG.random.int(0, letterData.length - 1)];
 
 			pass.text = passwordThing;
 		}
@@ -116,10 +95,10 @@ class PlayState extends FlxState
 
 	function passwordString()
 	{
-		var password:String = letterData[FlxG.random.int(0, letterData.length)] + letterData[FlxG.random.int(0, letterData.length)] + letterData[FlxG.random.int(0, letterData.length)]
-			+ letterData[FlxG.random.int(0, letterData.length)] + letterData[FlxG.random.int(0, letterData.length)] + letterData[FlxG.random.int(0, letterData.length)]
-			+ letterData[FlxG.random.int(0, letterData.length)] + letterData[FlxG.random.int(0, letterData.length)] + letterData[FlxG.random.int(0, letterData.length)]
-			+ letterData[FlxG.random.int(0, letterData.length)] + letterData[FlxG.random.int(0, letterData.length)] + letterData[FlxG.random.int(0, letterData.length)];
+		var password:String = letterData[FlxG.random.int(0, letterData.length - 1)] + letterData[FlxG.random.int(0, letterData.length - 1)] + letterData[FlxG.random.int(0, letterData.length - 1)]
+			+ letterData[FlxG.random.int(0, letterData.length - 1)] + letterData[FlxG.random.int(0, letterData.length - 1)] + letterData[FlxG.random.int(0, letterData.length - 1)]
+			+ letterData[FlxG.random.int(0, letterData.length - 1)] + letterData[FlxG.random.int(0, letterData.length - 1)] + letterData[FlxG.random.int(0, letterData.length - 1)]
+			+ letterData[FlxG.random.int(0, letterData.length - 1)] + letterData[FlxG.random.int(0, letterData.length - 1)] + letterData[FlxG.random.int(0, letterData.length - 1)];
 
 		return password;
 	}
